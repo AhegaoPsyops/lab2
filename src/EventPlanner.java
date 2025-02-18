@@ -47,13 +47,17 @@ public class EventPlanner {
         int panelHeight = height/numEvents - 50;
         JFrame frame = new JFrame("Event Planner");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel backPanel = new JPanel();
-        backPanel.setBackground(Color.BLACK);
-        backPanel.setPreferredSize(new Dimension(width, height));
-        frame.getContentPane().add(backPanel);
+        //JPanel backPanel = new JPanel();
+        //backPanel.setBackground(Color.BLACK);
+        //.setPreferredSize(new Dimension(width, height));
+        //frame.getContentPane().add(backPanel);
 
         EventListPanel eventList = new EventListPanel();
-        backPanel.add(eventList);
+       // backPanel.add(eventList);
+
+        eventList.addEvent(firstMeeting);
+
+        frame.add(eventList);
         frame.pack();
         frame.setVisible(true);
         eventList.repaint();
