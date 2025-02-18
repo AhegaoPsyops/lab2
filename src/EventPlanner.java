@@ -49,12 +49,13 @@ public class EventPlanner {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //JPanel backPanel = new JPanel();
         //backPanel.setBackground(Color.BLACK);
-        //.setPreferredSize(new Dimension(width, height));
+        frame.setPreferredSize(new Dimension(width, height));
         //frame.getContentPane().add(backPanel);
 
         EventListPanel eventList = new EventListPanel();
        // backPanel.add(eventList);
 
+        eventList.addEvent(firstDeadline);
         eventList.addEvent(firstMeeting);
 
         frame.add(eventList);
